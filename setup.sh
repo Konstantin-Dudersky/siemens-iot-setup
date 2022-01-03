@@ -6,7 +6,7 @@ echo
 echo "-----> Upgrading system:"
 apt -y update
 apt -y upgrade
-apt -y curl build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev
+apt -y install curl build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev
 apt -y install libssl-dev libsqlite3-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev
 apt -y install python3-distutils
 

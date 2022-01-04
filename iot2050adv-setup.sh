@@ -3,12 +3,18 @@
 PYTHON_VER=3.10.1
 
 echo
+echo "-----> Disable clamav:"
+sudo systemctl stop clamav-daemon
+sudo systemctl disable clamav-daemon
+
+echo
 echo "-----> Upgrading system:"
-apt -y update
-apt -y upgrade
-apt -y install curl build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev
-apt -y install libssl-dev libsqlite3-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev
-apt -y install python3-distutils
+sudo apt -y update
+sudo apt -y upgrade
+sudo apt -y install curl htop nano
+sudo apt -y install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev
+sudo apt -y install libssl-dev libsqlite3-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev
+sudo apt -y install python3-distutils
 
 echo
 echo "-----> Create temp folder:"

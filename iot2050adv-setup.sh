@@ -22,8 +22,8 @@ sudo apt -y install python3-distutils
 echo
 echo "-----> Create temp folder:"
 cd ~ || exit
-mkdir temp
-cd temp || exit
+mkdir inosat
+cd inosat || exit
 
 echo
 echo "-----> Existing python version:"
@@ -41,7 +41,7 @@ echo "-----> Install python 3.10:"
 wget https://www.python.org/ftp/python/$PYTHON_VER/Python-$PYTHON_VER.tgz
 tar -xf Python-$PYTHON_VER.tgz && cd Python-$PYTHON_VER || exit
 ./configure --enable-optimizations && make -j "$(nproc)"
-make altinstall
+sudo make altinstall
 
 echo
 echo "-----> Installed python version"

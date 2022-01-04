@@ -1,10 +1,12 @@
 # siemens-iot-setup
 
 
+## IOT2050 advanced
+
 Скачиваем последнюю версию
 
-    wget https://github.com/Konstantin-Dudersky/siemens-iot-setup/releases/latest/download/siemens-iot-setup.sh
+    wget https://github.com/Konstantin-Dudersky/siemens-iot-setup/releases/latest/download/iot2050adv-setup.sh
 
 Делаем выполняемым и запускаем
 
-    chmod +x siemens-iot-setup.sh && ./siemens-iot-setup.sh
+    chmod +x iot2050adv-setup.sh && ./iot2050adv-setup.sh

@@ -15,7 +15,7 @@ sudo apt -y upgrade
 echo
 echo "-----> Install software:"
 sudo apt -y install curl htop nano git
-sudo apt -y install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev
+sudo apt -y install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libsqlite3-dev
 sudo apt -y install libssl-dev libsqlite3-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev
 sudo apt -y install python3-distutils
 

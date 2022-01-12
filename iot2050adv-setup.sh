@@ -13,11 +13,8 @@ sudo apt -y update
 sudo apt -y upgrade
 
 echo
-echo "-----> Install software:"
+echo "-----> Install general software:"
 sudo apt -y install curl htop nano git
-sudo apt -y install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libsqlite3-dev
-sudo apt -y install libssl-dev libsqlite3-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev
-sudo apt -y install python3-distutils
 
 echo
 echo "-----> Create temp folder:"
@@ -31,6 +28,7 @@ python3 -V
 
 echo
 echo "-----> Install poetry:"
+sudo apt -y install python3-distutils
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 # shellcheck disable=SC1090
 source ~/.poetry/env
@@ -38,6 +36,8 @@ poetry config virtualenvs.in-project true
 
 echo
 echo "-----> Install python 3.10:"
+sudo apt -y install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libsqlite3-dev
+sudo apt -y install libssl-dev libsqlite3-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev
 wget https://www.python.org/ftp/python/$PYTHON_VER/Python-$PYTHON_VER.tgz
 tar -xf Python-$PYTHON_VER.tgz && cd Python-$PYTHON_VER || exit
 ./configure --enable-optimizations && make -j "$(nproc)"

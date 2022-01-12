@@ -13,7 +13,7 @@ sudo systemctl stop node-red.service
 sudo systemctl disable node-red.service
 
 echo
-echo "-----> Install software:"
+echo "-----> Install general software:"
 sudo apt -y install curl htop nano git
 
 echo

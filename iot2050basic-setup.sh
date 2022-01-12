@@ -7,7 +7,10 @@ echo "-----> Upgrading system:"
 sudo apt -y update
 sudo apt -y upgrade
 
-echo ""
+echo
+echo "----> Stop node-red:"
+sudo systemctl stop node-red.service
+sudo systemctl disable node-red.service
 
 echo
 echo "-----> Install software:"

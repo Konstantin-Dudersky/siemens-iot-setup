@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PYTHON_VER=3.10.1
+PYTHON_VER=3.10.4
 
 echo
 echo "-----> Disable clamav:"
@@ -29,7 +29,7 @@ python3 -V
 echo
 echo "-----> Install poetry:"
 sudo apt -y install python3-distutils
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
+curl -sSL https://install.python-poetry.org | python -
 # shellcheck disable=SC1090
 source ~/.poetry/env
 poetry config virtualenvs.in-project true
